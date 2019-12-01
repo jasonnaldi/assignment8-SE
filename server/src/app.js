@@ -36,6 +36,7 @@ module.exports = class App {
 
         this.web.registerUser(username, password, address)
           .then((userRecord) => {
+            console.log('new user', userRecord);
             res.status(200).send({
               status: 'success',
               payload: {

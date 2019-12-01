@@ -40,6 +40,7 @@ const App = (props) => {
     default:
       currentPage = (
         <div>
+          <h1>Main</h1>
           <button
             type="button"
             onClick={() => { setPageName('login'); }}

@@ -42,6 +42,7 @@ const SignUp = ({ setPageName, setUser }) => {
 
   return (
     <div className="signup">
+      <h1>Sign Up</h1>
       <form onSubmit={(e) => { e.preventDefault(); submit(username, password, address, setPageName, setUser); }}>
         <label>User Name</label>
         <input
