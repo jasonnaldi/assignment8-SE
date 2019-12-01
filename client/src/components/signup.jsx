@@ -69,7 +69,7 @@ const SignUp = ({ setPageName, setUser }) => {
 
         <input
           type="submit"
-          value="Log In"
+          value="Sign Up"
           data-test="submit"
         />
       </form>
