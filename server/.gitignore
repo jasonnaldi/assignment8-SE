@@ -1,0 +1,10 @@
+*.DS_Store
+**/tags
+*.swp
+*.swo
+private.md
+
+**/dist
+**/node_modules
+**/private
+**/public
