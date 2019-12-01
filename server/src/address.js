@@ -10,9 +10,19 @@ module.exports = class Address {
   }
 
   insert(address) {
-    return this.conn
-      .query('INSERT INTO address(text) VALUES ($1); SELECT * FROM address WHERE text=$1', [address])
-      .then((res) => res.rows[0]);
+    return new Promise((resolve, reject) => {
+      this.conn
+        .query('INSERT INTO address(text) VALUES ($1)', [address])
+        .then(() => {
+          this.get(address)
+            .then((res) => {
+              resolve(res);
+            })
+            .catch((err) => {
+              reject(err);
+            });
+        });
+    });
   }
 
   getAndInsertIfNew(address) {

@@ -35,7 +35,7 @@ const submit = (username, password, address, setPageName, setUser) => {
     });
 };
 
-const SignUp = () => {
+const SignUp = ({ setPageName, setUser }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [address, setAddress] = useState('');
