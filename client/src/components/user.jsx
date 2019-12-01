@@ -39,7 +39,7 @@ const User = ({ user }) => {
         }
       </h1>
       <form onSubmit={(e) => { e.preventDefault(); submit(username, password, bestFriend); }}>
-        <label>Best Friend</label>
+        <label>Best Friend : { user.bestFriend }</label>
         <input
           type="text"
           data-test="bestFriend"
@@ -49,7 +49,7 @@ const User = ({ user }) => {
 
         <input
           type="submit"
-          value="Log In"
+          value="Update"
           data-test="submit"
         />
       </form>
